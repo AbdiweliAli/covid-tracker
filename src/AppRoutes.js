@@ -9,8 +9,8 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/About" element={<About />} />
-      <Route path="/LStorage" element={<LStorage />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/local-storage" element={<LStorage />} />
       <Route path="/*" element={<Error />} />
     </Routes>
   );

@@ -1,5 +1,5 @@
 import bannerImage from "../img/worldmap.png";
-import { Form } from "../components/Form";
+import { Form } from "./SearchForm";
 
 export const Banner = () => {
   return (

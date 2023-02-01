@@ -1,48 +1,14 @@
 :root {
-  --charcoal: #282c34;
-  --ocean-blue: #61dafb;
-  --white: #ffffff;
+  --imperial-red: #e63946ff;
+  --honeydew: #f1faeeff;
+  --powder-blue: #a8dadcff;
+  --celadon-blue: #457b9dff;
+  --prussian-blue: #1d3557ff;
 }
-
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
-  background-color: var(--ocean-blue);
-}
-
-.code-block {
-  padding: 20px;
-}
-
-.banner {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--white);
-  margin-bottom: 20px;
-}
-
-.title {
-  font-size: 45px;
-  margin-bottom: 15px;
-}
-.nav-bar {
-  display: flex;
-  justify-content: space-evenly;
-}
-h1 {
-  text-align: center;
-}
-img {
-  width: 100%;
-  display: block;
-  border-radius: 50%;
-}
-.text-center {
-  width: 20vw;
-  height: 50px;
-  text-align: center;
-  margin: 0 auto;
+  background-color: var(--powder-blue);
 }
