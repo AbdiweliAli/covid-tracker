@@ -69,18 +69,18 @@ export const NavigationBar = () => {
               <MenuItem
                 onClick={() => {
                   handleCloseNavMenu();
-                  navigate("/about");
+                  navigate("/about-me");
                 }}
               >
-                <Typography textAlign="center">About</Typography>
+                <Typography textAlign="center">About Me</Typography>
               </MenuItem>
               <MenuItem
                 onClick={() => {
                   handleCloseNavMenu();
-                  navigate("/local-storage");
+                  navigate("/my-library");
                 }}
               >
-                <Typography textAlign="center">LStorage</Typography>
+                <Typography textAlign="center">My Library</Typography>
               </MenuItem>
             </Menu>
           </Box>
@@ -99,20 +99,20 @@ export const NavigationBar = () => {
             <Button
               onClick={() => {
                 handleCloseNavMenu();
-                navigate("/about");
+                navigate("/about-me");
               }}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              About
+              About Me
             </Button>
             <Button
               onClick={() => {
                 handleCloseNavMenu();
-                navigate("/local-storage");
+                navigate("/my-library");
               }}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              LStorage
+              My Library
             </Button>
           </Box>
         </Toolbar>

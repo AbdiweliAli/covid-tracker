@@ -2,9 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Input from "@mui/material/Input";
-// import CoronavirusIcon from "@mui/icons-material/Coronavirus";
-import TravelExploreIcon from "@mui/icons-material/TravelExplore";
-
+import SearchIcon from "@mui/icons-material/Search";
 import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 
@@ -45,7 +43,7 @@ export const SearchForm = ({ setSearchTerm }) => {
           endAdornment={
             <InputAdornment position="end">
               <IconButton type="submit">
-                <TravelExploreIcon />
+                <SearchIcon />
               </IconButton>
             </InputAdornment>
           }
