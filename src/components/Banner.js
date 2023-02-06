@@ -8,7 +8,7 @@ export const Banner = () => {
       <section className="section">
         <h1>covid tracket app 2023</h1>
         <div class="text-center">
-          <img src={bannerImage} class="rounded" alt="worldmap" />
+          <img src="../img/divimage.jpeg" alt="" />
           <Form />
         </div>
       </section>

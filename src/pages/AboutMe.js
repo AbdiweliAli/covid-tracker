@@ -1,36 +1,22 @@
+import img from "../img/devimage.png";
 export const AboutMe = () => {
   return (
-    <section class="section about">
-      <div class="section-center about-center">
-        {/* <!-- about img --> */}
-        <article class="about-img">
-          <img src="../img/devimage.jpeg" class="hero-photo" alt="about img" />
-        </article>
-        {/* <!-- about info --> */}
-        <article class="about-info">
-          {/* <!-- section title --> */}
-          <div class="section-title about-title">
-            <h2>about</h2>
-            <div class="underline"></div>
-          </div>
-          {/* <!--end of section title --> */}
+    <section className="container">
+      <article className="about-title">about title</article>
+      <div className="img"></div>
+      <div>
+        <img src={img} alt="" />
+
+        <article className="about-info"> about info</article>
+        <article className="about-details">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quae,
-            eum maiores est enim earum fugiat aspernatur. Fuga qui iste amet
-            reiciendis possimus rerum omnis recusandae molestias error
-            consequuntur, doloribus inventore reprehenderit officiis. Dolore
-            aut, repellendus eius fugiat numquam cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            ex velit accusantium? Fugit, velit alias.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quae,
-            eum maiores est enim earum fugiat aspernatur. Fuga qui iste amet
-            reiciendis possimus rerum omnis recusandae molestias error
-            consequuntur, doloribus inventore reprehenderit officiis. Dolore
-            aut, repellendus eius fugiat numquam cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            ex velit accusantium? Fugit, velit alias.
           </p>
-          <a href="about.html" class="btn">
-            about me
-          </a>
         </article>
       </div>
     </section>

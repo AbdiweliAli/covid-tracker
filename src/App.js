@@ -1,14 +1,18 @@
 import { BrowserRouter } from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar";
+import { Footer } from "./components/Footer";
+import { AppContextProvider } from "./components/context/AppContext";
 
 import { AppRoutes } from "./AppRoutes";
-// import { Navbar } from "./components/Navbar";
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <NavigationBar />
-      <AppRoutes />
+      <AppContextProvider>
+        <NavigationBar />
+        <AppRoutes />
+        <Footer />
+      </AppContextProvider>
     </BrowserRouter>
   );
 };

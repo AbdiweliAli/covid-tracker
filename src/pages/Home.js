@@ -44,7 +44,7 @@ export const Home = () => {
     }
   }, [searchTerm]);
 
-  console.log(books);
+  // console.log(books);
 
   return (
     <Container maxWidth="xl">

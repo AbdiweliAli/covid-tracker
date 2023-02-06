@@ -4,9 +4,13 @@ export const Books = ({ books }) => {
   return (
     <>
       <h1>Books</h1>
-      {books.map((book) => (
-        <Book book={book} key={book.id} />
-      ))}
+      <div className="books">
+        {books.map((book) => (
+          <Book book={book} />
+        ))}
+      </div>
     </>
   );
 };
+
+export default Books;
