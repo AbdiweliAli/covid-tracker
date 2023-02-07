@@ -1,5 +1,11 @@
 import { useAppContext } from "./context/AppContext";
 import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 
 export const Book = ({ book }) => {
   const { favorites, addToFavorites, removeFromFavorites } = useAppContext();
@@ -10,38 +16,53 @@ export const Book = ({ book }) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 600 }} variant="outlined">
-      <div key={book.id} className="book">
-        <div>
-          <h2>{book.volumeInfo.title}</h2>
-        </div>
-        <div>
-          <a href={book.volumeInfo.previewLink}>
-            <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="#" />
-          </a>
-        </div>
-        <div>
-          <h4>{book.volumeInfo.authors}</h4>
-        </div>
-        <div>
-          <h4>{book.volumeInfo.publishedDate}</h4>
-        </div>
+    <Card sx={{ width: 320, m: 1 }} variant="outlined">
+      <Link href={book.volumeInfo.previewLink} target="_blank">
+        <CardMedia
+          component="img"
+          alt={book.volumeInfo.title}
+          sx={{ width: "100%", objectFit: "contain" }}
+          height="100"
+          image={book.volumeInfo.imageLinks.smallThumbnail}
+        />
+      </Link>
 
-        <div>
-          {favoritesChecker(book.id) ? (
-            <button
-              className="btn"
-              onClick={() => removeFromFavorites(book.id)}
-            >
-              Remove from Favorites
-            </button>
-          ) : (
-            <button className="btn" onClick={() => addToFavorites(book)}>
-              Add to Favorites
-            </button>
-          )}
-        </div>
-      </div>
+      <CardContent sx={{ textAlign: "center", minHeight: 150 }}>
+        <Typography variant="h6" component="h2">
+          {book.volumeInfo.title}
+        </Typography>
+        <Typography variant="caption" component="h5">
+          {book.volumeInfo.authors.join(" | ")}
+        </Typography>
+        <Typography variant="caption" component="h6">
+          {book.volumeInfo.publishedDate}
+        </Typography>
+      </CardContent>
+
+      <CardActions
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        {favoritesChecker(book.id) ? (
+          <Button
+            variant="contained"
+            color="error"
+            onClick={() => removeFromFavorites(book.id)}
+          >
+            Remove from Favorites
+          </Button>
+        ) : (
+          <Button
+            variant="outlined"
+            color="success"
+            onClick={() => addToFavorites(book)}
+          >
+            Add to Favorites
+          </Button>
+        )}
+      </CardActions>
     </Card>
   );
 };
