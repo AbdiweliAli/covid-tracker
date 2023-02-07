@@ -1,17 +1,17 @@
-import bannerImage from "../img/worldmap.png";
-import { Form } from "./SearchForm";
+import Box from "@mui/material/Box";
+
+import img from "../img/searchbooks.png";
 
 export const Banner = () => {
   return (
-    <>
-      {" "}
-      <section className="section">
-        <h1>covid tracket app 2023</h1>
-        <div class="text-center">
-          <img src="../img/divimage.jpeg" alt="" />
-          <Form />
-        </div>
-      </section>
-    </>
+    <Box>
+      <div className="search">
+        <h1>Google book search app</h1>
+        <img src={img} alt="" />
+      </div>
+      <div>
+        <hr className="underline" />
+      </div>
+    </Box>
   );
 };

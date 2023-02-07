@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
+import { Banner } from "../components/Banner";
 
 export const Home = () => {
   const [searchTerm, setSearchTerm] = useState();
@@ -49,6 +50,7 @@ export const Home = () => {
   return (
     <Container maxWidth="xl">
       <Stack gap={3}>
+        <Banner />
         <SearchForm setSearchTerm={setSearchTerm} />
         {loading && (
           <Backdrop sx={{ color: "#fff", zIndex: 4 }} open={loading}>

@@ -11,7 +11,7 @@ export const App = () => {
       <AppContextProvider>
         <NavigationBar />
         <AppRoutes />
-        <Footer />
+        {/* <Footer /> */}
       </AppContextProvider>
     </BrowserRouter>
   );
